@@ -26,28 +26,35 @@ const loadPlaylists = () => {
       const elements = createPlaylistElement(playlist);
       container.appendChild(elements);
       playlistForm.addEventListener('click', (event) => {
-         if (event.target.querySelector('#nameOfPlaylist').innerHTML === playlist.playlist_name) {
-            openModal(playlist);
+         try {
+            if (event.target.querySelector('#nameOfPlaylist').innerHTML === playlist.playlist_name) {
+               openModal(playlist);
+            }
+         }
+         catch(error){
+            console.log("Error");
          }
       })
    }
 }
 
-// function toggleLike(){
-//    const likeButton = document.querySelector("#likeButton");
-//    for (const playlist of playlists){
-//       likeButton.addEventListener('click', (event) => {
-//          if (event.target.querySelector('#nameOfPlaylist').innerHTML === playlist.playlist_name) {
-//             playlist.likes++;
-//             console.log(playlist.likes);
-//          }
-//       })
-//    }
-// }
-
-document.addEventListener("DOMContentLoaded", () => {
-   loadPlaylists();
-});
+const updateLike = () => {
+   document.querySelectorAll('.likeButton').forEach(button => {
+      let isLiked = false;
+      const likeContainer = button.querySelector(".likeIcon");
+      likeContainer.addEventListener('click', (event) => {
+         if (isLiked === false){
+            likeContainer.querySelector(".likeCount").innerText = Number(likeContainer.querySelector(".likeCount").innerText) + 1;
+            isLiked = true;
+         }
+         else {
+            likeContainer.querySelector(".likeCount").innerText = Number(likeContainer.querySelector(".likeCount").innerText) - 1;
+            isLiked = false;
+         }
+      })
+   })
+   
+}
 
 const createPlaylistElement = (playlist) => {
    console.log(playlist);
@@ -57,7 +64,14 @@ const createPlaylistElement = (playlist) => {
       <img src="${playlist.playlist_art}" alt="Song Cover" width="200">
       <h3 id="nameOfPlaylist">${playlist.playlist_name}</h3>
       <p>${playlist.playlist_author}</p>
-      <p><span id="likeButton">♡</span> ${playlist.likes}</p>
+      <div class="likeButton">
+         <div class="likeIcon">♡ <span class="likeCount">${playlist.likes}</span></div>
+      </div>
    `;
    return playlistElement;
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+   loadPlaylists();
+   updateLike();
+});
