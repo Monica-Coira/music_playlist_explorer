@@ -11,15 +11,31 @@
 </head>
 <body>
     <header>
-        <!-- Your header content here -->
+        <h1 id="banner">Music Playlist Explorer</h1>
     </header>
 
     <main> 
-        <!-- Your main content here -->
+        <section class="playlist-cards">
+            <!-- Cards will be dynamically inserted here-->
+        </section>
     </main>
 
+    <div id="playlistModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <img id="playlistImage" src="" alt="Playlist Image" width="200">
+                <section id="playlistModalHeadings">
+                    <h1 id="playlistName"></h1>
+                    <p id="playlistCreator"></p>
+                </section>
+            </div>
+            <div id="listOfSongs"></div>
+        </div>
+    </div>
+
     <footer>
-        <!-- Your footer content here -->
+        
     </footer>
     <script src="data/data.js"></script>
     <script src="script.js"></script>
