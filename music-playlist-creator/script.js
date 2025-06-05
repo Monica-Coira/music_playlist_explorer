@@ -5,7 +5,7 @@ function openModal(playlist) {
    document.getElementById('playlistName').innerText = playlist.playlist_name;
    document.getElementById('playlistImage').src = playlist.playlist_art;
    document.getElementById('playlistCreator').innerText = playlist.playlist_author;
-   document.getElementById('listOfSongs').innerHTML = `<strong>Songs:</strong> ${playlist.songs.join(', ')}`;
+   document.getElementById('listOfSongs').innerHTML = `<strong>Songs:</strong> ${playlist.songs}`; 
    modal.style.display = "block";
 }
 
@@ -21,16 +21,32 @@ window.onclick = function(event) {
 const loadPlaylists = () => {
    console.log("loading playlists");
    const container = document.querySelector('.playlist-cards');
+   const playlistForm = document.querySelector(".playlist-cards");
    for (const playlist of playlists){
       const elements = createPlaylistElement(playlist);
       container.appendChild(elements);
+      playlistForm.addEventListener('click', (event) => {
+         if (event.target.querySelector('#nameOfPlaylist').innerHTML === playlist.playlist_name) {
+            openModal(playlist);
+         }
+      })
    }
 }
 
+// function toggleLike(){
+//    const likeButton = document.querySelector("#likeButton");
+//    for (const playlist of playlists){
+//       likeButton.addEventListener('click', (event) => {
+//          if (event.target.querySelector('#nameOfPlaylist').innerHTML === playlist.playlist_name) {
+//             playlist.likes++;
+//             console.log(playlist.likes);
+//          }
+//       })
+//    }
+// }
+
 document.addEventListener("DOMContentLoaded", () => {
    loadPlaylists();
-   const playlistForm = document.querySelector("#playlist-card");
-   playlistForm.addEventListener('click', openModal(playlist));
 });
 
 const createPlaylistElement = (playlist) => {
@@ -39,9 +55,9 @@ const createPlaylistElement = (playlist) => {
    playlistElement.id = "playlist-card";
    playlistElement.innerHTML = `
       <img src="${playlist.playlist_art}" alt="Song Cover" width="200">
-      <h3>${playlist.playlist_name}</h3>
+      <h3 id="nameOfPlaylist">${playlist.playlist_name}</h3>
       <p>${playlist.playlist_author}</p>
-      <button>Likes (${playlist.likes})</button>
+      <p><span id="likeButton">♡</span> ${playlist.likes}</p>
    `;
    return playlistElement;
 }

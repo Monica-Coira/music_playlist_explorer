@@ -36,6 +36,10 @@ header {
     background-color: #B3C7F7;
 }
 
+#likeButton:hover {
+    background-color: red;
+}
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
