@@ -6,17 +6,18 @@ function openModal(playlist) {
    document.getElementById('playlistImage').src = playlist.playlist_art;
    document.getElementById('playlistCreator').innerText = playlist.playlist_author;
    document.getElementById('listOfSongs').innerHTML = `
-      <strong>Songs:</strong>
-      <div class="songBox">
-         ${playlist.songs.map(song => `
+      ${playlist.songs.map(song => `
+         <div class="songBox">
             <img src="${song.image}" width="200">
-            <div>
-               <div>${song.songName}</div>
-               <div>${song.artist}</div>
-               <div>${song.duration}</div>
+            <div class="songLeftContent">
+               <div class="songTextContent">
+                  <div id="songName">${song.songName}</div>
+                  <div>${song.artist}</div>
+               </div>
             </div>
-         `).join('')}
-      </div>
+            <div class="songDuration">${song.duration}</div>
+         </div>
+      `).join('')}
    `; 
    modal.style.display = "block";
    shuffleSongs(playlist);
@@ -66,16 +67,18 @@ const shuffleSongs = (playlist) => {
          let songListShuffled;
          for (let song of playlist.songs){
             songListShuffled = `
-            <strong>Songs:</strong>
-            <div class="songBox">
-               ${playlist.songs.map(song => `
+            ${playlist.songs.map(song => `
+               <div class="songBox">
                   <img src="${song.image}" width="200">
-                  <div>
-                     <div>${song.songName}</div>
-                     <div>${song.artist}</div>
-                     <div>${song.duration}</div>
+                  <div class="songLeftContent">
+                     <div class="songTextContent">
+                        <div id="songName">${song.songName}</div>
+                        <div>${song.artist}</div>
+                     </div>
                   </div>
-               `).join('')}
+                  <div class="songDuration">${song.duration}</div>
+               </div>
+            `).join('')}
             </div>
             `;
          }

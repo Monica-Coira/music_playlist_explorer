@@ -12,8 +12,8 @@
 <body>
     <header>
         <h1 id="banner">Music Playlist Explorer</h1>
-        <nav>
-            <a href="index.html">All</a>
+        <nav id="navBar">
+            <a href="index.html" id="current">All</a>
             <a href="featured.html">Featured</a>
         </nav>
     </header>
@@ -28,13 +28,17 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close">&times;</span>
-                <img id="playlistImage" src="" alt="Playlist Image" width="200">
-                <section id="playlistModalHeadings">
-                    <h1 id="playlistName"></h1>
-                    <p id="playlistCreator"></p>
-                </section>
+                <div class="modalHeader">
+                    <div class="modalLeftContent">
+                        <img id="playlistImage" src="" alt="Playlist Image" width="200">
+                        <button class="shuffleButton">Shuffle</button>
+                    </div>
+                    <section id="playlistModalHeadings">
+                        <h1 id="playlistName"></h1>
+                        <p id="playlistCreator"></p>
+                    </section>
+                </div>
             </div>
-            <button class="shuffleButton">Shuffle</button>
             <div id="listOfSongs"></div>
         </div>
     </div>
