@@ -138,15 +138,15 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+The topics discussed in the labs greatly prepared me to complete the assignment. For example, the labs prepared me to dynamically render the playlists using Javascript and implement the like and shuffle functions. I felt more unprepared to complete the modal feature but was able to learn how to open it through the information found in the project milestones.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+If I had more time, I would have added more stretch features such as the search functionality, add new playlists form, and edit playlists form.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+I did not demo my project this week.
 
 ### Open-source libraries used
 
