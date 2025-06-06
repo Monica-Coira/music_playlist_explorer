@@ -78,6 +78,7 @@ header {
     border: 1px solid #888;
     width: 70%; 
     align-items: flex-start;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .close {
@@ -151,7 +152,6 @@ header {
 
 .songBox {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 15px;
     border-radius: 10px;
@@ -187,6 +187,7 @@ header {
 
 #songName {
     font-weight: bold;
+    align-items: flex-start;
 }
 
 #playlistModalHeadings {
@@ -197,26 +198,22 @@ header {
 
 .featured-playlist {
     display: flex;
-    flex-direction: row;
     gap: 20px;
+    justify-content: flex-start;
     align-items: flex-start;
 }
 
 .featured-songs {
     margin-top: 100px;
+    margin-right: 70px;
+    width: 100%;
+    text-align: left;
 }
 
 .featured-left {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.featured-left img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    width: 100px;
 }
 
 #featuredImage {
@@ -232,17 +229,6 @@ header {
 #featuredName {
     margin: 0;
     font-weight: bold;
-}
-
-#featuredCreator {
-    margin-top: 10px;
-}
-
-.featured-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
 }
 
 footer {

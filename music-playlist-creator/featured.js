@@ -16,7 +16,7 @@ const featuredPlaylist = (playlists) => {
             </div>
         `).join('')}
     </div>
-    `; 
+    `;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
