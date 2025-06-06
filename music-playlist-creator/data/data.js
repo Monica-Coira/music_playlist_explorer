@@ -89,7 +89,7 @@ let playlists = [
 		"likes": 9
 	},
 	{
-		"playlistID": 6,
+		"playlistID": 7,
 		"playlist_name": "Country Roots",
 		"playlist_author": "Jessica Taylor",
 		"playlist_art": "assets/img/playlist.png",

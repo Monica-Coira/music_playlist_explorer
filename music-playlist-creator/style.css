@@ -60,6 +60,18 @@ header {
     padding-right: 8px;
 }
 
+.cardButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.deleteButton {
+    background-color: #B3C7F7;
+    border-radius: 8px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
 .modal {
     display: none; 
     position: fixed; 

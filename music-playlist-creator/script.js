@@ -34,12 +34,23 @@ window.onclick = function(event) {
 }
 
 const loadPlaylists = () => {
-   console.log("loading playlists");
+   let deleteCount = 0;
    const container = document.querySelector('.playlist-cards');
    const playlistForm = document.querySelector(".playlist-cards");
    for (const playlist of playlists){
       const elements = createPlaylistElement(playlist);
       container.appendChild(elements);
+
+      document.querySelectorAll('.deleteButton').forEach(button => {
+         button.addEventListener('click', (event) => {
+            console.log(elements)
+            if (deleteCount === 0){
+               elements.style.display = "none";
+               deleteCount = 1;
+            }
+         })
+      })
+
       playlistForm.addEventListener('click', (event) => {
          try {
             if (event.target.querySelector('#nameOfPlaylist').innerHTML === playlist.playlist_name) {
@@ -115,8 +126,11 @@ const createPlaylistElement = (playlist) => {
       <img src="${playlist.playlist_art}" alt="Song Cover" width="200">
       <h3 id="nameOfPlaylist">${playlist.playlist_name}</h3>
       <p>Created by ${playlist.playlist_author}</p>
-      <div class="likeButton">
-         <div class="likeIcon"><img id="likeIcon" src="assets/img/heartEmpty.png" width="13"><span class="likeCount">${playlist.likes}</span></div>
+      <div class="cardButtons">
+         <div class="likeButton">
+            <div class="likeIcon"><img id="likeIcon" src="assets/img/heartEmpty.png" width="13"><span class="likeCount">${playlist.likes}</span></div>
+         </div>
+         <button class="deleteButton">Delete</button>
       </div>
    `;
    return playlistElement;
