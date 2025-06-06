@@ -8,7 +8,7 @@ const featuredPlaylist = (playlists) => {
         ${currentFeature.songs.map(song => `
             <div class="songBox">
                 <img src="${song.image}" width="100">
-                <div class="song-details">
+                <div class="featured-song-details">
                     <div id="songName">${song.songName}</div>
                     <div>${song.artist}</div>
                     <div>${song.duration}</div>
