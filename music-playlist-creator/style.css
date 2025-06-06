@@ -173,6 +173,8 @@ header {
     box-shadow: 0 5px 8px rgba(0,0,0,0.1);
     gap: 15px;
     box-sizing: border-box;
+    background-color: #C5D8F9;
+    margin-bottom: 20px;
 }
 
 .songleftContent {

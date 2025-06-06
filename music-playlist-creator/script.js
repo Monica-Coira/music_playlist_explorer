@@ -124,7 +124,7 @@ const createPlaylistElement = (playlist) => {
    const playlistElement = document.createElement('div');
    playlistElement.id = "playlist-card";
    playlistElement.innerHTML = `
-      <img src="${playlist.playlist_art}" alt="Song Cover" width="200">
+      <img src="${playlist.playlist_art}" alt="Song Cover" width="200" height="200">
       <h3 id="nameOfPlaylist">${playlist.playlist_name}</h3>
       <p>Created by ${playlist.playlist_author}</p>
       <div class="cardButtons">
