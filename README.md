@@ -131,11 +131,11 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
 ### Walkthrough Video
 
 `<div>
-    <a href="https://www.loom.com/share/451f3baebd2741ba95115abb8fcd2db0">
-      <p>Music Playlist Explorer</p>
+    <a href="https://www.loom.com/share/78cf3afd40564fecb51eec1e5bb15d8e">
+      <p>Monica's Music Playlist Explorer</p>
     </a>
-    <a href="https://www.loom.com/share/451f3baebd2741ba95115abb8fcd2db0">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/451f3baebd2741ba95115abb8fcd2db0-f395ecc90e3602f5-full-play.gif">
+    <a href="https://www.loom.com/share/78cf3afd40564fecb51eec1e5bb15d8e">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/78cf3afd40564fecb51eec1e5bb15d8e-431d4855ce72c426-full-play.gif">
     </a>
   </div>`
 
