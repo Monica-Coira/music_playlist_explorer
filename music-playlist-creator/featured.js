@@ -4,14 +4,15 @@ const featuredPlaylist = (playlists) => {
     document.getElementById('featuredImage').src = currentFeature.playlist_art;
     
     document.querySelector('.featured-songs').innerHTML = `
-    <strong>Songs:</strong>
     <div class="featuredSongs">
         ${currentFeature.songs.map(song => `
-            <img src="${song.image}" width="200">
-            <div>
-                <div>${song.songName}</div>
-                <div>${song.artist}</div>
-                <div>${song.duration}</div>
+            <div class="songBox">
+                <img src="${song.image}" width="100">
+                <div class="song-details">
+                    <div id="songName">${song.songName}</div>
+                    <div>${song.artist}</div>
+                    <div>${song.duration}</div>
+                </div>
             </div>
         `).join('')}
     </div>

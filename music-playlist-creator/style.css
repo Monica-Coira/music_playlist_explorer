@@ -72,7 +72,7 @@ header {
     background-color: rgba(0,0,0,0.4); 
 }
 .modal-content {
-    background-color: #fefefe;
+    background-color: #f0f0f0;
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
@@ -193,6 +193,56 @@ header {
     gap : 5px;
     display: flex;
     flex-direction: column;
+}
+
+.featured-playlist {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.featured-songs {
+    margin-top: 110px;
+}
+
+.featured-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.featured-left img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    width: 100px;
+}
+
+#featuredImage {
+    width: 700px;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 30px;
+    margin-left: 70px;
+    margin-top: 70px;
+}
+
+#featuredName {
+    margin: 0;
+    font-weight: bold;
+}
+
+#featuredCreator {
+    margin-top: 10px;
+}
+
+.featured-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 footer {
