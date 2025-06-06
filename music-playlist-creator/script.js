@@ -91,10 +91,12 @@ const updateLike = () => {
       likeContainer.addEventListener('click', (event) => {
          if (isLiked === false){
             likeContainer.querySelector(".likeCount").innerText = Number(likeContainer.querySelector(".likeCount").innerText) + 1;
+            likeContainer.querySelector("#likeIcon").src = "assets/img/heartRed.png";
             isLiked = true;
          }
          else {
             likeContainer.querySelector(".likeCount").innerText = Number(likeContainer.querySelector(".likeCount").innerText) - 1;
+            likeContainer.querySelector("#likeIcon").src = "assets/img/heartEmpty.png";
             isLiked = false;
          }
       })
@@ -111,7 +113,7 @@ const createPlaylistElement = (playlist) => {
       <h3 id="nameOfPlaylist">${playlist.playlist_name}</h3>
       <p>Created by ${playlist.playlist_author}</p>
       <div class="likeButton">
-         <div class="likeIcon">♡ <span class="likeCount">${playlist.likes}</span></div>
+         <div class="likeIcon"><img id="likeIcon" src="assets/img/heartEmpty.png" width="13"><span class="likeCount">${playlist.likes}</span></div>
       </div>
    `;
    return playlistElement;

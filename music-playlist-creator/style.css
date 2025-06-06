@@ -9,6 +9,24 @@ header {
     border: 1px solid gray;
     padding-left: 30px;
     background-color: #B3C7F7;
+    display: flex;
+    justify-content: space-between;
+}
+
+#navBar {
+    display: flex;
+    gap: 30px;
+    padding-right: 50px;
+    align-items: center;
+}
+
+#navBar a {
+    text-decoration: none;
+    color: black;
+}
+
+#navBar a:hover, #navBar a#current {
+    color: #0096FF;
 }
 
 .playlist-cards {
@@ -30,14 +48,16 @@ header {
     padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
 }
 
 #playlist-card:hover {
     background-color: #B3C7F7;
+    transform: scale(1.1) translateY(-4px);
 }
 
-#likeIcon:hover {
-    background-color: red;
+#likeIcon {
+    padding-right: 8px;
 }
 
 .modal {

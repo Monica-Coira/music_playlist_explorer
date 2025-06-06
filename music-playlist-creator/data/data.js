@@ -26,7 +26,7 @@ let playlists = [
 			{songName: "Bye Bye Bye", artist: "Artist", duration: "1:00", image: "assets/img/song.png"},
 			{songName: "Wannabe", artist: "Artist", duration: "1:00", image: "assets/img/song.png"}
 		],
-		"likes": 0
+		"likes": 3
 	},
 	{
 		"playlistID": 3,
@@ -41,7 +41,7 @@ let playlists = [
 			{songName: "Bye Bye Bye", artist: "Artist", duration: "1:00", image: "assets/img/song.png"},
 			{songName: "Wannabe", artist: "Artist", duration: "1:00", image: "assets/img/song.png"}
 		],
-		"likes": 0
+		"likes": 12
 	},
 	{
 		"playlistID": 4,
@@ -86,7 +86,7 @@ let playlists = [
 			{songName: "Bye Bye Bye", artist: "Artist", duration: "1:00", image: "assets/img/song.png"},
 			{songName: "Wannabe", artist: "Artist", duration: "1:00", image: "assets/img/song.png"}
 		],
-		"likes": 0
+		"likes": 9
 	},
 	{
 		"playlistID": 6,
