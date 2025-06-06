@@ -5,8 +5,21 @@ function openModal(playlist) {
    document.getElementById('playlistName').innerText = playlist.playlist_name;
    document.getElementById('playlistImage').src = playlist.playlist_art;
    document.getElementById('playlistCreator').innerText = playlist.playlist_author;
-   document.getElementById('listOfSongs').innerHTML = `<strong>Songs:</strong> ${playlist.songs}`; 
+   document.getElementById('listOfSongs').innerHTML = `
+      <strong>Songs:</strong>
+      <div class="songBox">
+         ${playlist.songs.map(song => `
+            <img src="${song.image}" width="200">
+            <div>
+               <div>${song.songName}</div>
+               <div>${song.artist}</div>
+               <div>${song.duration}</div>
+            </div>
+         `).join('')}
+      </div>
+   `; 
    modal.style.display = "block";
+   shuffleSongs(playlist);
 }
 
 span.onclick = function() {
@@ -38,6 +51,22 @@ const loadPlaylists = () => {
    }
 }
 
+const shuffleSongs = (playlist) => {
+   document.querySelectorAll('.shuffleButton').forEach(button => {
+      button.addEventListener('click', () => {
+         let currentIndex = playlist.songs.length;
+
+         while(currentIndex != 0){
+            let randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+
+            [playlist.songs[currentIndex], playlist.songs[randomIndex]] = [playlist.songs[randomIndex], playlist.songs[currentIndex]];
+         }
+         document.getElementById('listOfSongs').innerHTML = `<strong>Songs:</strong> ${playlist.songs}`;
+      })
+   })
+}
+
 const updateLike = () => {
    document.querySelectorAll('.likeButton').forEach(button => {
       let isLiked = false;
@@ -63,7 +92,7 @@ const createPlaylistElement = (playlist) => {
    playlistElement.innerHTML = `
       <img src="${playlist.playlist_art}" alt="Song Cover" width="200">
       <h3 id="nameOfPlaylist">${playlist.playlist_name}</h3>
-      <p>${playlist.playlist_author}</p>
+      <p>Created by ${playlist.playlist_author}</p>
       <div class="likeButton">
          <div class="likeIcon">♡ <span class="likeCount">${playlist.likes}</span></div>
       </div>

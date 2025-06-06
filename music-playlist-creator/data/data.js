@@ -4,7 +4,13 @@ let playlists = [
 		"playlist_name": "Summer Vibes",
 		"playlist_author": "Emily Wilson",
 		"playlist_art": "assets/img/playlist.png",
-		"songs": "Can't Stop the Feeling, Happy, Uptown Funk, I Gotta Feeling",
+		"songs": 
+		[
+			{songName: "Can't Stop the Feeling", artist: "Justin Timberlake", duration: "3:00", image: "assets/img/song.png"},
+			{songName: "Happy", artist: "Pharell", duration: "2:00", image: "assets/img/song.png"},
+			{songName: "Uptown Funk", artist: "Bruno Mars", duration: "3:10", image: "assets/img/song.png"},
+			{songName: "I Gotta Feeling", artist: "Artist", duration: "1:00", image: "assets/img/song.png"}
+		],
 		"likes": 0
 	},
 	{
@@ -12,7 +18,14 @@ let playlists = [
 		"playlist_name": "Retro Revival",
 		"playlist_author": "Rachel Brown",
 		"playlist_art": "assets/img/playlist.png",
-		"songs": "I Want it that Way, Waterfalls, No Scrubs, Bye Bye Bye, Wannabe",
+		"songs": 
+		[
+			{songName: "I Want it that Way", artist: "Justin Timberlake", duration: "3:00", image: "assets/img/song.png"},
+			{songName: "Waterfalls", artist: "Pharell", duration: "2:00", image: "assets/img/song.png"},
+			{songName: "No Scrubs", artist: "Bruno Mars", duration: "3:10", image: "assets/img/song.png"},
+			{songName: "Bye Bye Bye", artist: "Artist", duration: "1:00", image: "assets/img/song.png"},
+			{songName: "Wannabe", artist: "Artist", duration: "1:00", image: "assets/img/song.png"}
+		],
 		"likes": 0
 	},
 	{
@@ -20,7 +33,14 @@ let playlists = [
 		"playlist_name": "Workout Motivation",
 		"playlist_author": "Michael Davis",
 		"playlist_art": "assets/img/playlist.png",
-		"songs": "Pumped Up Kicks, Stronger, Roar, All I Do is Win, Unbreakable",
+		"songs": 
+		[
+			{songName: "I Want it that Way", artist: "Justin Timberlake", duration: "3:00", image: "assets/img/song.png"},
+			{songName: "Waterfalls", artist: "Pharell", duration: "2:00", image: "assets/img/song.png"},
+			{songName: "No Scrubs", artist: "Bruno Mars", duration: "3:10", image: "assets/img/song.png"},
+			{songName: "Bye Bye Bye", artist: "Artist", duration: "1:00", image: "assets/img/song.png"},
+			{songName: "Wannabe", artist: "Artist", duration: "1:00", image: "assets/img/song.png"}
+		],
 		"likes": 0
 	},
 	{
@@ -28,7 +48,14 @@ let playlists = [
 		"playlist_name": "Road Trip",
 		"playlist_author": "Chris Martin",
 		"playlist_art": "assets/img/playlist.png",
-		"songs": "Born to be Wild, Life is a Highway, Sweet Home Alabama, Don't Stop Believin",
+		"songs": 
+		[
+			{songName: "I Want it that Way", artist: "Justin Timberlake", duration: "3:00", image: "assets/img/song.png"},
+			{songName: "Waterfalls", artist: "Pharell", duration: "2:00", image: "assets/img/song.png"},
+			{songName: "No Scrubs", artist: "Bruno Mars", duration: "3:10", image: "assets/img/song.png"},
+			{songName: "Bye Bye Bye", artist: "Artist", duration: "1:00", image: "assets/img/song.png"},
+			{songName: "Wannabe", artist: "Artist", duration: "1:00", image: "assets/img/song.png"}
+		],
 		"likes": 0
 	},
 	{
@@ -36,7 +63,44 @@ let playlists = [
 		"playlist_name": "Country Roots",
 		"playlist_author": "Jessica Taylor",
 		"playlist_art": "assets/img/playlist.png",
-		"songs": "Friends in Low Places, Jolene, Country Roads",
+		"songs": 
+		[
+			{songName: "I Want it that Way", artist: "Justin Timberlake", duration: "3:00", image: "assets/img/song.png"},
+			{songName: "Waterfalls", artist: "Pharell", duration: "2:00", image: "assets/img/song.png"},
+			{songName: "No Scrubs", artist: "Bruno Mars", duration: "3:10", image: "assets/img/song.png"},
+			{songName: "Bye Bye Bye", artist: "Artist", duration: "1:00", image: "assets/img/song.png"},
+			{songName: "Wannabe", artist: "Artist", duration: "1:00", image: "assets/img/song.png"}
+		],
+		"likes": 0
+	},
+	{
+		"playlistID": 6,
+		"playlist_name": "Country Roots",
+		"playlist_author": "Jessica Taylor",
+		"playlist_art": "assets/img/playlist.png",
+		"songs": 
+		[
+			{songName: "I Want it that Way", artist: "Justin Timberlake", duration: "3:00", image: "assets/img/song.png"},
+			{songName: "Waterfalls", artist: "Pharell", duration: "2:00", image: "assets/img/song.png"},
+			{songName: "No Scrubs", artist: "Bruno Mars", duration: "3:10", image: "assets/img/song.png"},
+			{songName: "Bye Bye Bye", artist: "Artist", duration: "1:00", image: "assets/img/song.png"},
+			{songName: "Wannabe", artist: "Artist", duration: "1:00", image: "assets/img/song.png"}
+		],
+		"likes": 0
+	},
+	{
+		"playlistID": 6,
+		"playlist_name": "Country Roots",
+		"playlist_author": "Jessica Taylor",
+		"playlist_art": "assets/img/playlist.png",
+		"songs": 
+		[
+			{songName: "I Want it that Way", artist: "Justin Timberlake", duration: "3:00", image: "assets/img/song.png"},
+			{songName: "Waterfalls", artist: "Pharell", duration: "2:00", image: "assets/img/song.png"},
+			{songName: "No Scrubs", artist: "Bruno Mars", duration: "3:10", image: "assets/img/song.png"},
+			{songName: "Bye Bye Bye", artist: "Artist", duration: "1:00", image: "assets/img/song.png"},
+			{songName: "Wannabe", artist: "Artist", duration: "1:00", image: "assets/img/song.png"}
+		],
 		"likes": 0
 	}
 ];
