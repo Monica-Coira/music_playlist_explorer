@@ -52,6 +52,7 @@ const loadPlaylists = () => {
       })
 
       playlistForm.addEventListener('click', (event) => {
+         deleteCount = 0;
          try {
             if (event.target.querySelector('#nameOfPlaylist').innerHTML === playlist.playlist_name) {
                openModal(playlist);
