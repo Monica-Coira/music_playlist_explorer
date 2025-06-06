@@ -25,6 +25,7 @@ function openModal(playlist) {
 span.onclick = function() {
    modal.style.display = "none";
 }
+
 window.onclick = function(event) {
    if (event.target == modal) {
       modal.style.display = "none";
@@ -62,7 +63,23 @@ const shuffleSongs = (playlist) => {
 
             [playlist.songs[currentIndex], playlist.songs[randomIndex]] = [playlist.songs[randomIndex], playlist.songs[currentIndex]];
          }
-         document.getElementById('listOfSongs').innerHTML = `<strong>Songs:</strong> ${playlist.songs}`;
+         let songListShuffled;
+         for (let song of playlist.songs){
+            songListShuffled = `
+            <strong>Songs:</strong>
+            <div class="songBox">
+               ${playlist.songs.map(song => `
+                  <img src="${song.image}" width="200">
+                  <div>
+                     <div>${song.songName}</div>
+                     <div>${song.artist}</div>
+                     <div>${song.duration}</div>
+                  </div>
+               `).join('')}
+            </div>
+            `;
+         }
+         document.getElementById('listOfSongs').innerHTML = songListShuffled;
       })
    })
 }
