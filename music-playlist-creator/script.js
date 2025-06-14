@@ -1,7 +1,7 @@
 const modal = document.getElementById("playlistModal");
 const span = document.getElementsByClassName("close")[0];
 
-function openModal(playlist) {
+const openModal = (playlist) => {
    document.getElementById('playlistName').innerText = playlist.playlist_name;
    document.getElementById('playlistImage').src = playlist.playlist_art;
    document.getElementById('playlistCreator').innerText = playlist.playlist_author;
@@ -23,11 +23,11 @@ function openModal(playlist) {
    shuffleSongs(playlist);
 }
 
-span.onclick = function() {
+span.onclick = () => {
    modal.style.display = "none";
 }
 
-window.onclick = function(event) {
+window.onclick = (event) => {
    if (event.target == modal) {
       modal.style.display = "none";
    }
