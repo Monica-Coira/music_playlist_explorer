@@ -254,4 +254,7 @@ footer {
     margin-top: 50px;
     min-height: 30px;
     min-width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-top: 15px;
 } 
