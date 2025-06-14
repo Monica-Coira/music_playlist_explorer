@@ -43,7 +43,6 @@ const loadPlaylists = () => {
 
       document.querySelectorAll('.deleteButton').forEach(button => {
          button.addEventListener('click', (event) => {
-            console.log(elements)
             if (deleteCount === 0){
                elements.style.display = "none";
                deleteCount = 1;
@@ -120,7 +119,6 @@ const updateLike = () => {
 }
 
 const createPlaylistElement = (playlist) => {
-   console.log(playlist);
    const playlistElement = document.createElement('div');
    playlistElement.id = "playlist-card";
    playlistElement.innerHTML = `
